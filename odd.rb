@@ -1,15 +1,17 @@
 def find_it(seq)
 
-counts = Hash.new 0
+# counts = Hash.new 0
 
-  seq.each do |s|
-   counts[s] += 1
-  end
-  counts.each {|k,v|
-    if v.odd?
-     return k
-    end
-}
+#   seq.each do |s|
+#    counts[s] += 1
+#   end
+#   counts.each {|k,v|
+#     if v.odd?
+#      return k
+#     end
+# }
+return seq.select {|i| i if seq.count(i).odd?}
+
 end
 
 
